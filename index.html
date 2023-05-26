@@ -129,7 +129,7 @@
                     block.style.background = "#4F4"
                     block.setAttribute("title", (new Date()).toString())
                     blocks.append(block)
-                    if (blocks.children.length >100) { blocks.removeChild(blocks.firstElementChild) }
+                    if (blocks.children.length > 200) { blocks.removeChild(blocks.firstElementChild) }
                 }).catch((time) => {
                     table.innerHTML =
                         `<tr><td style="color:red">offline</td><td>${time}ms</td><td>${url}</td></tr>` + table
@@ -137,7 +137,7 @@
                     let block = document.createElement("div")
                     block.classList.add("block")
                     block.style.background = "#F44"
-                    if (blocks.children.length >100) { blocks.removeChild(blocks.firstElementChild) }
+                    if (blocks.children.length > 200) { blocks.removeChild(blocks.firstElementChild) }
                     blocks.append(block)
                 })
             }
